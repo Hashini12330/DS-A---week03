@@ -13,7 +13,7 @@ public class Main{
 
         // 03 
         System.out.println("03. Creating and initializing arrays in different ways");
-        
+
         arr3 obj3 = new arr3();
         obj3.show3();
         System.out.println("--------------------------------------------------");
@@ -70,16 +70,22 @@ class arr2{
 // Creating and initializing arrays in different ways
 
 class arr3{
+
+    // method 1:
     int[] num1; // or   int num1[]; // both are valid
                 // the array has NOT been created yet.
 
     public void show3(){
         System.out.println("Array variable declared, but not created yet.");
 
+        
         // num1 = {10, 20, 30, 40, 50}; // array created and initialized
 
         // method 1: create first, then initialize
+        System.out.println("If you only want the first method, your code can be:");
+
         num1 = new int[5]; // array created, but not initialized
+
         num1[0] = 3; // array initialized
         num1[1] = 4; // array initialized
         num1[2] = 5; // array initialized
@@ -94,19 +100,19 @@ class arr3{
 
         System.out.println("--------------------------------------------------");
 
+
+
         // method 2: create and initialize together
-        num1 = new int[]{3, 4, 5, 6, 7}; // array created and initialized
+        System.out.println("Here not impact declara element");
+
+        num1 = new int[]{3, 4, 5, 6, 7, 8}; // array created and initialized
+                    // here has 6 elements, but the previous array has 5 elements, so the previous array will be destroyed.
 
         int j = 0;
 
         for(j = 0; j < num1.length; j++){
             System.out.println(num1[j]);
         }
-
-    
-
-
-
     }
 
 }
