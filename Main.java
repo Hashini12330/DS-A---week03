@@ -24,6 +24,9 @@ public class Main{
         arr4 obj4 = new arr4();
         obj4.annonym();
 
+        obj4.annonym2(new int[]{16, 17, 18, 19, 20});
+
+
     }
 }
 
@@ -136,5 +139,16 @@ class arr4{
         for(int k = 0; k < new int[] {15, 25, 35, 45, 55}.length; k++){
             System.out.println(new int[] {15, 25, 35, 45, 55}[k]);
         }
+        
+    }
+
+
+    public void annonym2(int[] num3){
+        System.out.println("Annonym with parameter: all elements of the array will be printed");
+        
+        for(int l = 0; l < num3.length; l++){
+            System.out.println(num3[l]);
+        }
+
     }
 }
