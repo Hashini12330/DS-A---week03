@@ -8,7 +8,7 @@ public class Main{
         // 02
         arr2 obj2 = new arr2();
         obj2.show1();
-        
+
 
     }
 }
@@ -37,10 +37,22 @@ class arr2{
         System.out.println("1. Declare + initialize together:");
         int[] num2 = {1, 2, 3, 4, 5}; // array created and initialized
 
+        int i = 0;
+        
+        for (i = 0; i < num2.length; i++){
+            System.out.println(num2[i]);
+
+        }
+
+
         // 2. Declare first, then create + initialize:
         System.out.println("2. Declare first, then create + initialize:");
         int[] num3; // declare
         num3 = new int[]{2, 4, 6, 8, 10}; // create + initialize
+
+        for (i = 0; i < num3.length; i++){
+            System.out.println(num3[i]);
+        }
     }
 }
 
