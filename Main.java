@@ -24,6 +24,7 @@ public class Main{
         arr4 obj4 = new arr4();
         obj4.annonym();
 
+        // annonym with parameters
         obj4.annonym2(new int[]{16, 17, 18, 19, 20});
 
 
