@@ -26,6 +26,18 @@ public class Main{
 
         // annonym with parameters
         obj4.annonym2(new int[]{16, 17, 18, 19, 20});
+        System.out.println("--------------------------------------------------");
+
+        // 05 
+        System.out.println("05. Reference array variable");
+        arr5 obj5 = new arr5();
+        obj5.show5();
+        System.out.println("--------------------------------------------------");
+
+
+        // 06
+        arr6 obj6 = new arr6();
+        obj6.show4();
 
 
     }
@@ -152,4 +164,50 @@ class arr4{
         }
 
     }
+}
+
+
+// reference array variable
+class arr5{
+    int[] aa;
+    
+    public void show5(){
+        // A
+        aa = new int[] {1, 2, 3, 4, 5}; // array created and initialized
+                            // This creates an actual array in memory:
+        
+        
+        System.out.println(aa[0]);
+
+        // B
+        // Then aa is changed to refer to Array B:
+        aa = new int[] {6, 7, 8, 9, 10}; // array created and initialized
+                            // This creates a new array in memory:
+        System.out.println(aa[0]);
+
+    }
+}
+
+
+// array length with average
+class arr6{
+    int[] num6;
+
+    public void show4(){
+        num6 = new int[]{1, 2, 3, 4, 5}; // array created and initialized
+        System.out.println("Length of the array: " + num6.length);
+
+        double average = 0.0;
+
+        for (int m = 0; m < num6.length; m++){
+            average += num6[m];
+
+        }
+        average /= num6.length;
+        System.out.println("Average of the array: " + average);
+
+
+    }
+
+
 }
