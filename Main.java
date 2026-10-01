@@ -19,6 +19,11 @@ public class Main{
         System.out.println("--------------------------------------------------");
         
 
+        // 04
+        System.out.println("04. Anonymous array of one index");
+        arr4 obj4 = new arr4();
+        obj4.annonym();
+
     }
 }
 
@@ -115,4 +120,21 @@ class arr3{
         }
     }
 
+}
+
+
+
+// 04 
+// Annonymous array: an array without a name, which is created and initialized in a single statement. It is used when you want to create an array and pass it as an argument to a method without storing it in a variable.
+class arr4{
+
+    public void annonym(){
+        System.out.println(new int[] {15, 25, 35, 45, 55}[0]); // annonymous array
+        
+        System.out.println("Annonymous array with for loop: all elements of the array will be printed");
+
+        for(int k = 0; k < new int[] {15, 25, 35, 45, 55}.length; k++){
+            System.out.println(new int[] {15, 25, 35, 45, 55}[k]);
+        }
+    }
 }
