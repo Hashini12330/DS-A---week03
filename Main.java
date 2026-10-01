@@ -38,6 +38,17 @@ public class Main{
         // 06
         arr6 obj6 = new arr6();
         obj6.show4();
+        System.out.println("--------------------------------------------------");
+
+        // 07
+        // 2D array
+        arr7 obj7 = new arr7();
+        obj7.show7();
+        System.out.println("--------------------------------------------------");
+
+        //  
+        obj7.show8();
+        System.out.println("--------------------------------------------------");
 
 
     }
@@ -208,6 +219,45 @@ class arr6{
 
 
     }
+}
 
 
+// 2D array
+class arr7{
+
+    // method: 01
+    int[][] num7 = new int[3][4]; // 2D array created, but not initialized
+
+    public void show7(){
+        num7[0][0] = 10; // array initialized
+        num7[1][1] = 20; // array initialized
+        num7[2][2] = 30; // array initialized  
+        num7[2][3] = 40; // array initialized
+
+        System.out.println("2D array: ");
+
+        System.out.println(num7[0][0]);
+        System.out.println(num7[1][1]);
+    
+
+    }
+
+
+    // method: 02
+    public void show8(){
+        int[][] num8 = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12}
+        };
+
+        System.out.println("2D array: ");
+        for (int i = 0; i < num8.length; i++){
+            for (int j = 0; j < num8[i].length; j++){
+                System.out.print(num8[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    
 }
