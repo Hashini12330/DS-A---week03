@@ -62,6 +62,15 @@ public class Main{
         obj8.show10();
 
 
+        // 09
+        // 3D array
+        // method 1
+        arr9 obj9 = new arr9();
+        obj9.show11();
+
+        // method 2
+        obj9.show12();
+
 
     }
 }
@@ -277,7 +286,7 @@ class arr7{
 
 
 // 08
-// jagged array
+// jagged array for 2D array
 class arr8{
 
     int[][] num9;
@@ -325,9 +334,98 @@ class arr8{
             }
             System.out.println();
         }
+    }
+}
 
+
+
+// 09
+// 3D array
+class arr9{
+    int[][][] num11;
+
+    public void show11(){
+        // method 1
+        
+        // step 1: declaring level, row & columns at once
+        num11 = new int [2][3][2];
+
+        // step 2: declaring its values
+        num11[0][0][0] = 1;
+        num11[0][0][1] = 2;
+        num11[0][1][0] = 3;
+        num11[0][1][1] = 4;
+
+
+        // step 3: printing the 3D array
+        System.out.println("3D array: ");
+        System.out.println(num11[0][0][0]);
+        System.out.println(num11[0][0][1]);
+
+    }
+
+    
+    
+    // 
+    public void show12(){
+        // method 2
+        int[][][] num12 = {
+            {
+                {1, 2},
+                {3, 4, 5},
+                {6, 7, 8, 9}
+            },
+            {
+                {10, 11},
+                {12, 13, 14}
+            }
+        };
+
+        for(int p = 0; p < num12.length; p++){
+            for(int q = 0; q < num12[p].length; q++){
+                for(int r = 0; r < num12[p][q].length; r++){
+                    System.out.print(num12[p][q][r] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+
+        }
 
     }
 
 
+    // jagged 3D array
+    public void show13(){
+        // method 1
+        // step 1: only declaring level, but not row & columns
+        num11 = new int[2][][];
+
+        // step 2: declaring rows for each level
+        num11[0] = new int[3][];
+        num11[1] = new int[2][];
+
+        // step 3: declaring columns for each row
+        num11[0][0] = new int[2];
+        num11[0][1] = new int[3];
+        num11[0][2] = new int[4];
+        num11[1][0] = new int[2];
+        num11[1][1] = new int[3];
+
+
+        // step 4: declaring its values
+        num11[0][0][0] = 1;
+        num11[0][0][1] = 2;
+        num11[0][1][0] = 3;
+        num11[0][1][1] = 4;
+
+
+        // step 5: printing the 3D array
+        System.out.println("3D array: ");
+        System.out.println(num11[0][0][0]);
+        System.out.println(num11[0][0][1]);
+
+
+    }
 }
+
