@@ -51,6 +51,18 @@ public class Main{
         System.out.println("--------------------------------------------------");
 
 
+        // 08
+        // jagged array
+        // method 1
+        arr8 obj8 = new arr8();
+        obj8.show9();
+        System.out.println("--------------------------------------------------");
+
+        // method 2
+        obj8.show10();
+
+
+
     }
 }
 
@@ -229,6 +241,7 @@ class arr7{
     int[][] num7 = new int[3][4]; // 2D array created, but not initialized
 
     public void show7(){
+        // declaring its values
         num7[0][0] = 10; // array initialized
         num7[1][1] = 20; // array initialized
         num7[2][2] = 30; // array initialized  
@@ -260,4 +273,61 @@ class arr7{
         }
     }
     
+}
+
+
+// 08
+// jagged array
+class arr8{
+
+    int[][] num9;
+    
+    public void show9(){
+
+        // method: 01
+        // step 1:
+        // only declaring rows, but not columns
+        num9 = new int[4][];
+
+        // step 2:
+        // declaring columns for each row
+        num9[0] = new int[2];
+        num9[1] = new int[3];
+
+        // step 3:
+        // declaring its values
+        num9[0][0] = 1;
+        num9[0][1] = 2;
+        num9[1][0] = 3;
+        num9[1][1] = 4;
+        num9[1][2] = 5;
+        
+        // printing the jagged array
+        System.out.println("Jagged array: ");
+        System.out.println(num9[0][0]);
+        System.out.println(num9[0][1]);
+        
+    }
+
+
+    public void show10(){
+
+        // method: 02
+        int[][] num10 = {
+            {1, 2},
+            {3, 4, 5},
+            {6, 7, 8, 9}
+        };
+
+        for (int n = 0; n < num10.length; n++){
+            for (int o = 0; o < num10[n].length; o++){
+                System.out.print(num10[n][o] + " ");
+            }
+            System.out.println();
+        }
+
+
+    }
+
+
 }
