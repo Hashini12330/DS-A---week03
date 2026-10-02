@@ -71,6 +71,9 @@ public class Main{
         // method 2
         obj9.show12();
 
+        // jagged 3D array
+        obj9.show13();
+
 
     }
 }
