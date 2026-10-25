@@ -1,3 +1,6 @@
+import java.util.Arrays;
+
+
 public class Main{
     public static void main(){
 
@@ -73,7 +76,13 @@ public class Main{
 
         // jagged 3D array
         obj9.show13();
+        System.out.println("--------------------------------------------------");
 
+
+
+        // 10
+        arr10 obj10 = new arr10();
+        obj10.show14();
 
     }
 }
@@ -432,3 +441,16 @@ class arr9{
     }
 }
 
+// 10
+// importing and convert as String and print at ones
+
+class arr10{
+    int[] a;
+
+    public void show14(){
+        a = new int[] {100, 20, 30};
+
+        System.out.println(Arrays.toString(a));
+    }
+
+}
